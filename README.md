@@ -1,6 +1,6 @@
 # Мой проект
 
-<p style="animation: blink 2s infinite;">✨ Привет! Это анимированный текст!</p>
+<p style="animation: blink 2s infinite;" >✨ Привет! Это анимированный текст!</p>
 
 <style>
 @keyframes blink {
