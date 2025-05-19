@@ -1,20 +1,26 @@
 body {
-    background: #f0f8ff;  /* Голубой фон */
+    background: #f0f8ff;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    padding: 30px;
+    padding: 5%; /* Было 30px */
+    margin: 0; /* Убираем стандартные отступы */
 }
 
 h1 {
-    color: #2c3e50;  /* Темно-синий цвет */
-    border-bottom: 2px solid #3498db;  /* Синяя линия под заголовком */
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
+    font-size: 2.5rem; /* Относительная единица */
+    margin: 0 auto 20px; /* Центрирование */
+    max-width: 90%; /* Ограничиваем ширину */
 }
 
 .button {
     background: #3498db;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
+    display: inline-block; /* Чтобы работали отступы */
+    font-size: 1.1rem;
 }
