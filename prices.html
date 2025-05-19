@@ -1,39 +1,30 @@
+<!-- prices.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наши Цены</title>
+    <title>Цены</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Прайс-лист</h1>
-        
+        <h1>Наши цены</h1>
         <table class="price-table">
+            <!-- Добавлены aria-labels для доступности -->
+            <tr aria-label="Категория 1">
+                <th colspan="2" class="category">Категория 1</th>
+            </tr>
             <tr>
-                <th colspan="2" class="category">Электроника</th>
+                <td>Товар 1</td>
+                <td>500 ₽</td>
             </tr>
-            <tr class="product-row">
-                <td><a href="product1.html" class="product-link">Смартфон X10</a></td>
-                <td>25 000 ₽</td>
-            </tr>
-            <tr class="product-row">
-                <td><a href="product2.html" class="product-link">Ноутбук ProBook</a></td>
-                <td>65 000 ₽</td>
-            </tr>
-
             <tr>
-                <th colspan="2" class="category">Бытовая техника</th>
-            </tr>
-            <tr class="product-row">
-                <td><a href="product3.html" class="product-link">Холодильник Frost</a></td>
-                <td>45 000 ₽</td>
+                <td>Товар 2</td>
+                <td>750 ₽</td>
             </tr>
         </table>
-
         <a href="index.html" class="button">На главную</a>
     </div>
 </body>
 </html>
- 
