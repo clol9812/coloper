@@ -1,84 +1,128 @@
 /* style.css */
-/* Основные стили (остались как раньше) */
+/* Новые цвета */
+:root {
+  --primary: #2c3e50;    /* Темно-синий */
+  --secondary: #3498db;  /* Голубой */
+  --accent: #e74c3c;     /* Красный */
+  --background: #f9f9f9; /* Светлый фон */
+  --text: #2c3e50;       /* Основной текст */
+}
+
 body {
-    background: #f0f8ff;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center; /* Центрируем весь контент */
 }
 
-/* Кнопки (добавлено выравнивание) */
+h1 {
+  color: var(--primary);
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: var(--secondary);
+  margin: 15px auto 0;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
 .button {
-    background: #3498db;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 15px 0;
-    transition: background 0.3s;
-    text-align: center; /* NEW */
+  background: var(--secondary);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  margin: 20px 0;
 }
 
 .button:hover {
-    background: #2980b9;
+  background: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.2);
 }
 
-/* Таблица (оптимизация для мобильных) */
 .price-table {
-    width: 100%;
-    margin: 30px 0;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .price-table td, .price-table th {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
 }
 
-/* АДАПТИВНОСТЬ (осталось как раньше + улучшения) */
+.category {
+  background: var(--primary);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px; /* NEW */
-    }
-    
-    .price-table {
-        font-size: 0.9rem;
-    }
-    
-    .button {
-        width: 100%; /* NEW */
-        box-sizing: border-box;
-    }
+  .container {
+    padding: 30px 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .price-table {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 14px; /* NEW */
-    }
-    
-    .price-table td, .price-table th {
-        padding: 10px;
-        display: block; /* NEW - для мобильных */
-        width: 100%;
-    }
-    
-    .price-table tr {
-        display: block; /* NEW - каждая строка как блок */
-        margin-bottom: 15px;
-    }
-    
-    .category {
-        font-size: 1rem; /* NEW */
-    }
+  h1::after {
+    width: 40%;
+  }
+  
+  .price-table td, .price-table th {
+    padding: 12px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .price-table tr {
+    margin-bottom: 20px;
+    background: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
 }
