@@ -24,3 +24,36 @@ h1 {
     display: inline-block; /* Чтобы работали отступы */
     font-size: 1.1rem;
 }
+/* Для экранов меньше 768px (планшеты) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Уменьшаем заголовок */
+        padding-bottom: 8px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .button {
+        width: 90%; /* Кнопка на всю ширину */
+        margin: 0 auto; /* Центрирование */
+    }
+}
+
+/* Для экранов меньше 480px (мобильные) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Еще меньше */
+        border-bottom: 1px solid #3498db;
+    }
+
+    p {
+        font-size: 0.9rem; /* Уменьшаем текст */
+    }
+
+    .button {
+        width: 100%; /* На всю ширину */
+        padding: 10px;
+    }
+}
