@@ -1,0 +1,32 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]  # Замените на вашу ветку (main/master)
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Upload files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./  # Если файлы сайта в корне репозитория
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
