@@ -1,18 +1,19 @@
+/* Основные стили */
 body {
     background: #f0f8ff;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    padding: 5%; /* Было 30px */
-    margin: 0; /* Убираем стандартные отступы */
+    padding: 5%;
+    margin: 0;
 }
 
 h1 {
     color: #2c3e50;
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
-    font-size: 2.5rem; /* Относительная единица */
-    margin: 0 auto 20px; /* Центрирование */
-    max-width: 90%; /* Ограничиваем ширину */
+    font-size: 2.5rem;
+    margin: 0 auto 20px;
+    max-width: 90%;
 }
 
 .button {
@@ -21,13 +22,19 @@ h1 {
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block; /* Чтобы работали отступы */
+    display: inline-block;
     font-size: 1.1rem;
+    transition: background 0.3s; /* Плавное изменение цвета */
 }
-/* Для экранов меньше 768px (планшеты) */
+
+.button:hover {
+    background: #2980b9; /* Эффект при наведении */
+}
+
+/* Адаптив для планшетов (до 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Уменьшаем заголовок */
+        font-size: 2rem;
         padding-bottom: 8px;
     }
 
@@ -36,24 +43,25 @@ h1 {
     }
 
     .button {
-        width: 90%; /* Кнопка на всю ширину */
-        margin: 0 auto; /* Центрирование */
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
-/* Для экранов меньше 480px (мобильные) */
+/* Адаптив для мобильных (до 480px) */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem; /* Еще меньше */
+        font-size: 1.5rem;
         border-bottom: 1px solid #3498db;
     }
 
     p {
-        font-size: 0.9rem; /* Уменьшаем текст */
+        font-size: 0.9rem;
     }
 
     .button {
-        width: 100%; /* На всю ширину */
+        width: 100%;
         padding: 10px;
+        font-size: 1rem;
     }
 }
